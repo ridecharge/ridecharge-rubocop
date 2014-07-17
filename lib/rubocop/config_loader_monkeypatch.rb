@@ -10,8 +10,11 @@ module RuboCop
       config_files_in_path(target_dir).first || DEFAULT_FILE
     end
 =end
-    def configuration_file_for(target_dir)
-      config_files_in_path(target_dir).first || DEFAULT_RIDECHARGE_FILE
+    class << self
+      def configuration_file_for(target_dir)
+        $stderr.puts DEFAULT_RIDECHARGE_FILE
+        config_files_in_path(target_dir).first || DEFAULT_RIDECHARGE_FILE
+      end
     end
   end
 end
