@@ -11,3 +11,12 @@ require 'rubocop'
 require 'rubocop/ridecharge'
 require 'rubocop/rake_task'
 Rubocop::RakeTask.new
+
+
+
+task :console do
+  require 'irb'
+  require 'irb/completion'
+  ARGV.clear
+  IRB.start
+end
