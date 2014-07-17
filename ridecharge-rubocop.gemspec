@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Ridecharge::Rubocop::VERSION
   spec.authors       = ["Tim Snowhite"]
   spec.email         = ["tsnowhite@taximagic.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Ridecharge Rubocop configuration}
+  spec.description   = %q{our special blend of crazy}
   spec.homepage      = ""
   spec.license       = "MIT"
 
