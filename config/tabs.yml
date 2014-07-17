@@ -1,0 +1,15 @@
+# Decision: Don't use tabs for indentation.
+# Rationale: Because actual tab characters cause different editors and 
+#  code viewers to align the code differently, reducing readability.
+# Workflow: 
+# In Emacs: 
+#  ;;; (require 'ruby-mode) ;; is needed for this setting
+#  (setq indent-tabs-mode nil) ; always replace tabs with spaces
+# In Sublime Text:
+#  Should be set automatically via ruby-mode.
+# In Vim:
+#  autocmd FileType ruby setlocal expandtab shiftwidth=4 softtabstop=4
+
+
+Tab:
+  Enabled: true
