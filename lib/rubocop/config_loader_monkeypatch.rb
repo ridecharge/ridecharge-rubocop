@@ -31,11 +31,9 @@ module Rubocop
 =end
     class << self
       def configuration_file_for(target_dir)
-        $stderr.puts [target_dir, DEFAULT_RIDECHARGE_FILE].inspect
         config_files_in_path(target_dir).first || DEFAULT_RIDECHARGE_FILE
       end
       def configuration_from_file(config_file)
-        $stderr.puts [config_file, DEFAULT_RIDECHARGE_FILE].inspect
         config = load_file(config_file)
         return config if config_file == DEFAULT_RIDECHARGE_FILE
 
