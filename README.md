@@ -20,6 +20,10 @@ Or install it yourself as:
 
 Run ridecharge-rubocop in .travis.yml to check your application against our current syntax guide.
 
+`config/0default.yml` is the entrypoint.
+
+`config/tabs.yml` shows an example setting.
+
 ## Contributing
 
 1. Make a new branch, with your requested change.
