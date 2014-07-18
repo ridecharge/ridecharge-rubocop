@@ -1,6 +1,6 @@
 # Ridecharge::Rubocop
 
-TODO: Write a gem description
+Our company's syntax guide, in tool form.
 
 ## Installation
 
