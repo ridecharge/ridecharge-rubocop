@@ -1,3 +1,4 @@
 inherit_from: 
  - rubocop/default.yml
+ - ridecharge-rubocop-todo.yml
  - tabs.yml
