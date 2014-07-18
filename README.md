@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-Run ridecharge-rubocop in .travis.yml to check your application against our current syntax guide.
+Run `ridecharge-rubocop -R` in .travis.yml to check your application against our current syntax guide.
 
 `config/0default.yml` is the entrypoint.
 
