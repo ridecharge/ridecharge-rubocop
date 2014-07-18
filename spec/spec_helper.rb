@@ -12,6 +12,8 @@ if ENV['TRAVIS'] && RUBY_ENGINE == 'jruby'
   ENV['TMPDIR'] = non_world_writable_tmp_dir
 end
 
+# From rubocop's spec/spec_helper.
+=begin
 if ENV['TRAVIS'] || ENV['COVERAGE']
   require 'simplecov'
 
@@ -25,6 +27,7 @@ if ENV['TRAVIS'] || ENV['COVERAGE']
     add_filter '/vendor/bundle/'
   end
 end
+=end
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
