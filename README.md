@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'ridecharge-rubocop'
+    gem 'ridecharge-rubocop', '0.0.1'
 
 And then execute:
 
@@ -18,12 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run ridecharge-rubocop in .travis.yml to check your application against our current syntax guide.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/ridecharge-rubocop/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+1. Make a new branch, with your requested change.
+2. Make a pull request with some reasoning. Get at least 3 :+1:'s.
+3. Bump the version before merging your pull request.
+4. Run `rake release` in a local checkout of this repository to push the updated gem version to rubygems.
+5. Make an Issue with a todo for each name of all the applications which are not yet updated.
+6. Make pull requests in each app to update the ridecharge-rubocop version. Change any offenses.
+7. Merge and deploy the pull requests in each of the organization's apps.
