@@ -1,0 +1,24 @@
+AllCops:
+  Excludes:
+    - vendor/**
+
+# Offence count: 4
+BlockNesting:
+  Max: 5
+
+# Offence count: 12
+# Configuration parameters: CountComments.
+ClassLength:
+  Max: 2721
+
+
+# Offence count: 30
+CyclomaticComplexity:
+  Max: 56
+
+
+# Offence count: 54
+# Configuration parameters: CountComments.
+MethodLength:
+  Max: 327
+
