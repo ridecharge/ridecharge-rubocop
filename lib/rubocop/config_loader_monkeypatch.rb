@@ -55,5 +55,65 @@ module Rubocop
       end
     end
   end
-end
+  class Config
+    #https://github.com/bbatsov/rubocop/blob/v0.18.1/lib/rubocop/config.rb#L41
+=begin
+    # TODO: This should be a private method
+    def validate
+      # Don't validate RuboCop's own files. Avoids inifinite
+      # recursion.
+      return if @loaded_path.start_with?(ConfigLoader::RUBOCOP_HOME)
 
+      default_config = ConfigLoader.default_configuration
+
+      valid_cop_names, invalid_cop_names = @hash.keys.partition do |key|
+        default_config.key?(key)
+      end
+
+      invalid_cop_names.each do |name|
+        fail ValidationError,
+             "unrecognized cop #{name} found in #{loaded_path || self}"
+      end
+
+      valid_cop_names.each do |name|
+        @hash[name].each_key do |param|
+          unless COMMON_PARAMS.include?(param) ||
+                 default_config[name].key?(param)
+            fail ValidationError,
+                 "unrecognized parameter #{name}:#{param} found " +
+                 "in #{loaded_path || self}"
+          end
+        end
+      end
+    end
+=end
+
+    def validate
+      # Don't validate RuboCop's own files. Avoids inifinite
+      # recursion.
+      return if @loaded_path.start_with?(ConfigLoader::RIDECHARGE_RUBOCOP_HOME)
+
+      default_config = ConfigLoader.default_configuration
+
+      valid_cop_names, invalid_cop_names = @hash.keys.partition do |key|
+        default_config.key?(key)
+      end
+
+      invalid_cop_names.each do |name|
+        fail ValidationError,
+                     "unrecognized cop #{name} found in #{loaded_path || self}"
+      end
+
+      valid_cop_names.each do |name|
+        @hash[name].each_key do |param|
+          unless COMMON_PARAMS.include?(param) ||
+              default_config[name].key?(param)
+            fail ValidationError,
+                             "unrecognized parameter #{name}:#{param} found in #{loaded_path || self}"
+          end
+        end
+      end
+    end
+    
+  end
+end
