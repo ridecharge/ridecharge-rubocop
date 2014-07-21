@@ -1,4 +1,8 @@
 inherit_from: 
  - rubocop/default.yml
  - ridecharge-rubocop_todo.yml
+ - rc-todo.yml
+ - fleet-magic-todo.yml
+ - vehicle-todo.yml
+ - standard-todo.yml
  - tabs.yml

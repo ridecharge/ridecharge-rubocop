@@ -11,4 +11,4 @@ matrix:
 before_install: gem update --remote bundler
 script:
   - bundle exec rspec
-  - bundle exec ridecharge-rubocop -d
+  - bundle exec ridecharge-rubocop -R -d
